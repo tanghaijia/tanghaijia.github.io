@@ -7,17 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Tue, 11 Aug 2020 19:01:19 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2020 00:07:04 +0800</lastBuildDate>
     
 	<atom:link href="https://tanghaijia.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>如何在win搭建hogo博客</title>
-      <link>https://tanghaijia.github.io/2020/08/11/%E5%A6%82%E4%BD%95%E5%9C%A8win%E6%90%AD%E5%BB%BAhogo%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Tue, 11 Aug 2020 19:01:19 +0800</pubDate>
+      <title>使用hugo搭建静态博客</title>
+      <link>https://tanghaijia.github.io/2020/08/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 12 Aug 2020 00:07:04 +0800</pubDate>
       
-      <guid>https://tanghaijia.github.io/2020/08/11/%E5%A6%82%E4%BD%95%E5%9C%A8win%E6%90%AD%E5%BB%BAhogo%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://tanghaijia.github.io/2020/08/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
       <description>Hugo是一个用Go编写的静态站点生成器，由于具有丰富的主题资源和惊人的生成速度而备受青睐。本博客即是基于Hugo搭建，下面讲述一下我的建站历程以及踩的几个大坑（此处手动Doge…）。
 安装Hugo以及生成第一篇文章 安装Hugo 如果你是macOS用户，请使用Homebrew快速安装
 brew install hugo
@@ -36,6 +36,15 @@ hugo new post/first.md
 在first.md中写入一些内容，使用如下命令进行本地预览：
 hugo server -t casper -D
 几乎瞬间编译成功，打开网址 http://localhost:1313/ 即可查看本地生成的静态网站。</description>
+    </item>
+    
+    <item>
+      <title>文章二</title>
+      <link>https://tanghaijia.github.io/2020/08/12/%E6%96%87%E7%AB%A0%E4%BA%8C/</link>
+      <pubDate>Wed, 12 Aug 2020 00:07:04 +0800</pubDate>
+      
+      <guid>https://tanghaijia.github.io/2020/08/12/%E6%96%87%E7%AB%A0%E4%BA%8C/</guid>
+      <description>这是第二篇文章</description>
     </item>
     
   </channel>

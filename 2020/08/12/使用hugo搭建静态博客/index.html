@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="使用hugo搭建静态博客"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@ShaneTian6"/>
+
+
+
+  	<meta property="og:title" content="使用hugo搭建静态博客 &middot; 堂堂糖的主页" />
+  	<meta property="og:site_name" content="堂堂糖的主页" />
+  	<meta property="og:url" content="https://tanghaijia.github.io/2020/08/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" />
+
+    
+        
+            <meta property="og:image" content="/images/02.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-08-12T00:07:04&#43;08:00" />
+
+    
+    <meta property="article:tag" content="" />
+    
+    
+
+    <title>使用hugo搭建静态博客 &middot; 堂堂糖的主页</title>
+
+    
+    <meta name="description" content="Hugo是一个用Go编写的静态站点生成器，由于具有丰富的主题资源和惊人的生成速度而备受青睐。本博客即是基于Hugo搭建，下面讲述一下我的建站历程以及踩的几个大坑（此处手动Doge…）。
+安装Hugo以及生成第一篇文章 安装Hugo 如果你是macOS用户，请使用Homebrew快速安装
+brew install hug" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://tanghaijia.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://tanghaijia.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://tanghaijia.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://tanghaijia.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/atom-one-light.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://tanghaijia.github.io/index.xml" rel="alternate" type="application/rss+xml" title="堂堂糖的主页" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.74.3" />
+
+    <link rel="canonical" href="https://tanghaijia.github.io/2020/08/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null ,
+        "logo": "https://tanghaijia.github.ioimages/logo.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://tanghaijia.github.ioimages/logo.png",
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": "suixinblog.cn",
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": "Every man dies, not every man really lives."
+        
+    },
+    "headline": "使用hugo搭建静态博客",
+    "name": "使用hugo搭建静态博客",
+    "wordCount":  47 ,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tanghaijia.github.io/2020/08/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/",
+    "datePublished": "2020-08-12T00:07Z",
+    "dateModified": "2020-08-12T00:07Z",
+    
+    "keywords": "",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tanghaijia.github.io/2020/08/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://tanghaijia.github.io/">Home</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://tanghaijia.github.io/tags/machine-learning">Machine Learning</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://tanghaijia.github.io/tags/others">Others</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://tanghaijia.github.io/about">About</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://tanghaijia.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="https://tanghaijia.github.io"><img src="https://tanghaijia.github.io/images/logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">使用hugo搭建静态博客</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-08-12T00:07:04&#43;08:00">
+            Aug 12, 2020
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://tanghaijia.github.io/tags//">#</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Hugo是一个用Go编写的静态站点生成器，由于具有丰富的主题资源和惊人的生成速度而备受青睐。本博客即是基于Hugo搭建，下面讲述一下我的建站历程以及踩的几个大坑（此处手动Doge…）。</p>
+<p>安装Hugo以及生成第一篇文章
+安装Hugo
+如果你是macOS用户，请使用Homebrew快速安装</p>
+<p>brew install hugo</p>
+<p>如果你是Windows用户，请使用Chocolatey或者Scoop快速安装，取决于你使用什么包管理</p>
+<p>choco install hugo -confirm</p>
+<p>scoop install hugo</p>
+<p>如果你是Debian或Ubuntu用户，请使用apt快速安装</p>
+<p>sudo apt-get install hugo</p>
+<p>基本上使用单行命令都可以成功安装Hugo，具体请移步这里。</p>
+<p>生成文章
+使用如下命令新建一个名为“mysite”的网站：</p>
+<p>hugo new site mysite</p>
+<p>接下来，在这里找到一个漂亮的网站主题。相信我，Hugo的主题海洋会让你纠结到死……经过一番激烈的挣扎，我最终还是投靠给了Casper，没有什么能比一张大图占据整个屏幕带来的冲击感更强了……（说不定过段时间我又折腾着换别的主题了……）。言归正传，以Casper为例，将主题clone到本地的themes文件夹内，执行以下两句即可：</p>
+<p>cd themes
+git clone <a href="https://github.com/vjeantet/hugo-theme-casper.git">https://github.com/vjeantet/hugo-theme-casper.git</a> casper</p>
+<p>mysite/content是用来存放文档的地方，我们在其下建立一个新的Markdown文件：</p>
+<p>hugo new post/first.md</p>
+<p>在first.md中写入一些内容，使用如下命令进行本地预览：</p>
+<p>hugo server -t casper -D</p>
+<p>几乎瞬间编译成功，打开网址 http://localhost:1313/ 即可查看本地生成的静态网站。</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://tanghaijia.github.io" style="background-image: url(/images/logo.png)"><span class="hidden">Tang's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://tanghaijia.github.io">Tang</a></h4>
+  
+  <p>Every man dies, not every man really lives.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Shanxi, China</span>
+    <span class="author-link icon-link"><a href="suixinblog.cn">suixinblog.cn</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e4%bd%bf%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2&nbsp;-&nbsp;%e5%a0%82%e5%a0%82%e7%b3%96%e7%9a%84%e4%b8%bb%e9%a1%b5&amp;url=https%3a%2f%2ftanghaijia.github.io%2f2020%2f08%2f12%2f%25E4%25BD%25BF%25E7%2594%25A8hugo%25E6%2590%25AD%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E5%258D%259A%25E5%25AE%25A2%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftanghaijia.github.io%2f2020%2f08%2f12%2f%25E4%25BD%25BF%25E7%2594%25A8hugo%25E6%2590%25AD%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E5%258D%259A%25E5%25AE%25A2%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftanghaijia.github.io%2f2020%2f08%2f12%2f%25E4%25BD%25BF%25E7%2594%25A8hugo%25E6%2590%25AD%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E5%258D%259A%25E5%25AE%25A2%2f&amp;description=%e4%bd%bf%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftanghaijia.github.io%2f2020%2f08%2f12%2f%25E4%25BD%25BF%25E7%2594%25A8hugo%25E6%2590%25AD%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E5%258D%259A%25E5%25AE%25A2%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/tanghaijia.github.io\/2020\/08\/12\/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2\/";  
+this.page.identifier = "https:\/\/tanghaijia.github.io\/2020\/08\/12\/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://YOUR_SHORT_NAME_HERE.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://tanghaijia.github.io/2020/08/12/%E6%96%87%E7%AB%A0%E4%BA%8C/">
+          <section class="post">
+              <h2>文章二</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">堂堂糖的主页</a> All rights reserved - 2015</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://tanghaijia.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://tanghaijia.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://tanghaijia.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
