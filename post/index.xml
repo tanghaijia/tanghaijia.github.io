@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 堂堂糖的主页</title>
+    <link>https://tanghaijia.github.io/post/</link>
+    <description>Recent content in Posts on 堂堂糖的主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Tue, 11 Aug 2020 19:01:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://tanghaijia.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何在win搭建hogo博客</title>
+      <link>https://tanghaijia.github.io/2020/08/11/%E5%A6%82%E4%BD%95%E5%9C%A8win%E6%90%AD%E5%BB%BAhogo%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 11 Aug 2020 19:01:19 +0800</pubDate>
+      
+      <guid>https://tanghaijia.github.io/2020/08/11/%E5%A6%82%E4%BD%95%E5%9C%A8win%E6%90%AD%E5%BB%BAhogo%E5%8D%9A%E5%AE%A2/</guid>
+      <description>Hugo是一个用Go编写的静态站点生成器，由于具有丰富的主题资源和惊人的生成速度而备受青睐。本博客即是基于Hugo搭建，下面讲述一下我的建站历程以及踩的几个大坑（此处手动Doge…）。
+安装Hugo以及生成第一篇文章 安装Hugo 如果你是macOS用户，请使用Homebrew快速安装
+brew install hugo
+如果你是Windows用户，请使用Chocolatey或者Scoop快速安装，取决于你使用什么包管理
+choco install hugo -confirm
+scoop install hugo
+如果你是Debian或Ubuntu用户，请使用apt快速安装
+sudo apt-get install hugo
+基本上使用单行命令都可以成功安装Hugo，具体请移步这里。
+生成文章 使用如下命令新建一个名为“mysite”的网站：
+hugo new site mysite
+接下来，在这里找到一个漂亮的网站主题。相信我，Hugo的主题海洋会让你纠结到死……经过一番激烈的挣扎，我最终还是投靠给了Casper，没有什么能比一张大图占据整个屏幕带来的冲击感更强了……（说不定过段时间我又折腾着换别的主题了……）。言归正传，以Casper为例，将主题clone到本地的themes文件夹内，执行以下两句即可：
+cd themes git clone https://github.com/vjeantet/hugo-theme-casper.git casper
+mysite/content是用来存放文档的地方，我们在其下建立一个新的Markdown文件：
+hugo new post/first.md
+在first.md中写入一些内容，使用如下命令进行本地预览：
+hugo server -t casper -D
+几乎瞬间编译成功，打开网址 http://localhost:1313/ 即可查看本地生成的静态网站。</description>
+    </item>
+    
+  </channel>
+</rss>
